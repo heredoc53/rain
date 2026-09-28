@@ -1,0 +1,33 @@
+#Build directory
+build/
+Build/
+build-*/
+
+#Build artifacts
+*.o
+*.obj
+*.slo
+*.lo
+*.d
+*.exe
+
+#Libraries
+*.a
+*.so
+*.dylib
+*.dll
+*.lib
+
+#CMake files
+CMakeFiles/
+CMakeCache.txt
+Makefile
+compile_commands.json
+install_manifest.txt
+cmake_install.cmake
+
+#vcpkg
+vcpkg_installed/
+
+#tests
+install/

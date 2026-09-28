@@ -1,0 +1,8 @@
+[build]
+name = "program_test"
+cc = "g++"
+sources = ["src", "src.subdir"]
+includes = ["include", "include.subdir"]
+library_paths = []
+libraries = []
+packages = ["foo"]

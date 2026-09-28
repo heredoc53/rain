@@ -1,0 +1,6 @@
+[build]
+name = "module_test"
+cc = "clang++"
+is_modules = true
+module_main = "src/main.cpp"
+sources = ["src", "src.subdir"]
