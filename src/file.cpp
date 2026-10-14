@@ -91,7 +91,7 @@ tuple<bool, fs::path> is_installed(string_view name){
     constexpr auto os = platform::get_os();
     //paths = std::views::split(path, platform::get_binpath_separator()) | std::ranges::to<vector>();
     if(const auto res = platform::get_environment_variable("PATH"); res.has_value())
-        for(auto&& p : res.value() | vws::split(bin_sep) | vws::transform([](const auto&& pr){
+        for(auto&& p : res.value() | vws::split(bin_sep) | vws::transform([](auto&& pr){//pr was const auto&&
                 return fs::path(string(pr.begin(), pr.end())); }))
             paths.push_back(std::move(p));//emplace_back(p.begin(), p.end());
     else
