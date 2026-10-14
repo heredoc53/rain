@@ -4,7 +4,7 @@ import os
 #create path objects for directory that have tests and directory that contains exe of rain (../build/rain)
 test_dir = Path("cases")
 bin_dir = Path(__file__).resolve().parent.parent / "build" / "rain"
-#used by subprocess to as arguments to launc everything
+#used by subprocess to as arguments to launch everything
 launch_com = [bin_dir, "build"]
 #copy all of environment variables and add package path then path to process
 env = os.environ.copy()
